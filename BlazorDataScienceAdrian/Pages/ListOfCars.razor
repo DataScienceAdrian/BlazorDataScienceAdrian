@@ -1,0 +1,168 @@
+﻿@page "/cars"
+
+@inject HttpClient Http
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Brand</th>
+            <th scope="col">Sign</th>
+            <th scope="col">Informations</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Volkswagen</td>
+            <td><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/4ad36332-03b9-4804-aad7-acc8455a1109/d48akn5-a91e5632-1d15-4b7d-b533-3af5c98896f7.png" alt="Example" width="183" height="130"></td>
+            <td><a href="https://pl.wikipedia.org/wiki/Volkswagen">More Information</a></td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Ford</td>
+            <td><img src="https://www.cjponyparts.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/c/l/cl3z8213a_1.2311.jpg" alt="Example" width="183" height="130"></td>
+            <td><a href="https://pl.wikipedia.org/wiki/Ford_Motor_Company">More Information</a></td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Renault</td>
+            <td><img src="https://i.pinimg.com/236x/ff/b8/9f/ffb89f20840200a904bda86979741352.jpg" alt="Example" width="150" height="100"></td>
+            <td><a href="https://pl.wikipedia.org/wiki/Renault">More Information</a></td>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <td>Opel</td>
+            <td><img src="https://cdn.worldvectorlogo.com/logos/opel-6.svg" alt="Example" width="183" height="130"></td>
+            <td><a href="https://pl.wikipedia.org/wiki/Opel">More Information</a></td>
+        </tr>
+        <tr>
+            <th scope="row">5</th>
+            <td>Mercedes-Benz</td>
+            <td><img src="https://www.kindpng.com/picc/m/485-4854398_download-for-free-mercedes-icon-png-mercedes-benz.png" alt="Example" width="183" height="130"></td>
+            <td><a href="https://pl.wikipedia.org/wiki/Mercedes-Benz">More Information</a></td>
+        </tr>
+        <tr>
+            <th scope="row">6</th>
+            <td>Audi</td>
+            <td><img src="https://i.pinimg.com/originals/c3/03/85/c3038557e1ee167bd0e4406900e67194.jpg" alt="Example" width="183" height="130"></td>
+            <td><a href="https://pl.wikipedia.org/wiki/Audi">More Information</a></td>
+        </tr>
+        <tr>
+            <th scope="row">7</th>
+            <td>BMW</td>
+            <td><img src="https://cdn0.iconfinder.com/data/icons/car-brands/550/BMW_logo-512.png" alt="Example" width="183" height="130"></td>
+            <td><a href="https://pl.wikipedia.org/wiki/BMW">More Information</a></td>
+        </tr>
+        <tr>
+            <th scope="row">8</th>
+            <td>Fiat</td>
+            <td><img src="https://cdn.iconscout.com/icon/free/png-512/fiat-1-202773.png" alt="Example" width="183" height="130"></td>
+            <td><a href="https://pl.wikipedia.org/wiki/FIAT">More Information</a></td>
+        </tr>
+        <tr>
+            <th scope="row">9</th>
+            <td>Škoda</td>
+            <td><img src="https://cdn.iconscout.com/icon/free/png-512/skoda-1-202898.png" alt="Example" width="183" height="130"></td>
+            <td><a href="https://pl.wikipedia.org/wiki/%C5%A0koda">More Information</a></td>
+        </tr>
+        <tr>
+            <th scope="row">10</th>
+            <td>Toyota</td>
+            <td><img src="https://cdn.iconscout.com/icon/free/png-512/toyota-1-202914.png" alt="Example" width="183" height="130"></td>
+            <td><a href="https://pl.wikipedia.org/wiki/Toyota">More Information</a></td>
+        </tr>
+        <tr>
+            <th scope="row">11</th>
+            <td>Citroën</td>
+            <td><img src="https://i.pinimg.com/originals/92/48/e0/9248e0c87d03c1d8745491cf453b7c1f.jpg" alt="Example" width="183" height="130"></td>
+            <td><a href="https://pl.wikipedia.org/wiki/Citro%C3%ABn">More Information</a></td>
+        </tr>
+        <tr>
+            <th scope="row">12</th>
+            <td>Nissan</td>
+            <td><img src="https://d2dgtayfmpkokn.cloudfront.net/wp-content/uploads/sites/530/2018/05/11093935/cropped-nissan-icon.png" alt="Example" width="183" height="130"></td>
+            <td><a href="https://pl.wikipedia.org/wiki/Nissan">More Information</a></td>
+        </tr>
+        <tr>
+            <th scope="row">13</th>
+            <td>Hyundai</td>
+            <td><img src="https://www.freepngimg.com/download/hyundai/20764-8-hyundai-logo.png" alt="Example" width="183" height="130"></td>
+            <td><a href="https://pl.wikipedia.org/wiki/Hyundai">More Information</a></td>
+        </tr>
+        <tr>
+            <th scope="row">14</th>
+            <td>Kia</td>
+            <td><img src="https://lofrev.net/wp-content/photos/2014/07/Kia-Logo-3D.jpg" alt="Example" width="183" height="130"></td>
+            <td><a href="https://pl.wikipedia.org/wiki/Kia_Motors">More Information</a></td>
+        </tr>
+        <tr>
+            <th scope="row">15</th>
+            <td>Dacia</td>
+            <td><img src="https://cartype.com/pics/3341/full/dacia_logo_new_1.jpg" alt="Example" width="183" height="130"></td>
+            <td><a href=">https://pl.wikipedia.org/wiki/Dacia">More Information</a></td>
+        </tr>
+        <tr>
+            <th scope="row">16</th>
+            <td>Seat</td>
+            <td><img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/SEAT_Logo_from_2017.svg" alt="Example" width="183" height="130"></td>
+            <td><a href="https://pl.wikipedia.org/wiki/SEAT">More Information</a></td>
+        </tr>
+        <tr>
+            <th scope="row">17</th>
+            <td>Volvo</td>
+            <td><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4ad36332-03b9-4804-aad7-acc8455a1109/d48al0v-3af1e0e6-b11a-46d9-81b5-0dcee1a7533e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNGFkMzYzMzItMDNiOS00ODA0LWFhZDctYWNjODQ1NWExMTA5XC9kNDhhbDB2LTNhZjFlMGU2LWIxMWEtNDZkOS04MWI1LTBkY2VlMWE3NTMzZS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.OSMHGbrUp1NybABAczHpt6d5rpfHAXmsX8fscTmyKVY" alt="Example" width="150" height="100"></td>
+            <td><a href="https://pl.wikipedia.org/wiki/Volvo_Car_Corporation">More Information</a></td>
+        </tr>
+        <tr>
+            <th scope="row">18</th>
+            <td>Suzuki</td>
+            <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSwAWiQ-FdENpTgmVyeDu3uW08QCM95Qpdjb7_qtNIcQtR11dJs&usqp=CAU" alt="Example" width="183" height="130"></td>
+            <td><a href="https://pl.wikipedia.org/wiki/Suzuki">More Information</a></td>
+        </tr>
+        <tr>
+            <th scope="row">19</th>
+            <td>Mazda</td>
+            <td><img src="https://3.bp.blogspot.com/-qM4OzDPZ97o/XIEapmtVSUI/AAAAAAAAIeQ/O09f5Z1q9tMocVuFDCDGC-c3HL7CRTLswCK4BGAYYCw/s1600/logo%2Bmazda.png" alt="Example" width="183" height="130"></td>
+            <td><a href="https://pl.wikipedia.org/wiki/Mazda">More Information</a></td>
+        </tr>
+        <tr>
+            <th scope="row">20</th>
+            <td>Mini</td>
+            <td><img src="https://cdn.iconscout.com/icon/free/png-512/mini-cooper-569187.png" alt="Example" width="183" height="130"></td>
+            <td><a href="https://pl.wikipedia.org/wiki/Mini_(1959)">More Information</a></td>
+        </tr>
+        <tr>
+            <th scope="row">21</th>
+            <td>Land Rover</td>
+            <td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/LandRover.svg/1200px-LandRover.svg.png" alt="Example" width="183" height="130"></td>
+            <td><a href="https://pl.wikipedia.org/wiki/Land_Rover">More Information</a></td>
+        </tr>
+        <tr>
+            <th scope="row">22</th>
+            <td>Jeep</td>
+            <td><img src="https://cdn.iconscout.com/icon/free/png-512/jeep-59-202822.png" alt="Example" width="183" height="130"></td>
+            <td><a href="https://pl.wikipedia.org/wiki/Jeep">More Information</a></td>
+        </tr>
+        <tr>
+            <th scope="row">23</th>
+            <td>Honda</td>
+            <td><img src="https://komarjohari.files.wordpress.com/2013/06/honda-cars-logo-small.jpg" alt="Example" width="183" height="130"></td>
+            <td><a href="https://pl.wikipedia.org/wiki/Honda">More Information</a></td>
+        </tr>
+        <tr>
+            <th scope="row">24</th>
+            <td>Mitsubishi</td>
+            <td><img src="https://image.flaticon.com/icons/png/512/806/806019.png" alt="Example" width="183" height="130"></td>
+            <td><a href="https://pl.wikipedia.org/wiki/Mitsubishi">More Information</a></td>
+        </tr>
+        <tr>
+            <th scope="row">25</th>
+            <td>Chevrolet</td>
+            <td><img src="https://www.autocentrum.pl/ac-file/article/58932f69582c7da1b2a3dbb9/tajemnica-logo-chevroleta.jpg" alt="Example" width="183" height="130"></td>
+            <td><a href="https://pl.wikipedia.org/wiki/Chevrolet">More Information</a></td>
+        </tr>
+
+    </tbody>
+    Text available under the Creative Commons Attribution License, Share Alike, with additional restrictions.
+</table>

@@ -1,0 +1,53 @@
+﻿@using HtmlAgilityPack;
+@page "/webscrap"
+
+<h3>At this moment WebScrapper is using the site: <a href="https://weather.com/weather/today/l/53.13,23.17?par=google&temp=c">The Weather Channel</a> with default Białystok location  </h3>
+<h4>Next thing to do is to make WebScrapper work more efficient </h4>
+<br>
+<button class="btn btn-primary" @onclick="WebscrapWeatherData">Get Weather Data</button>
+<br>
+<p><b>Location:</b> @emptyLocation </p>
+<p><b>Time:</b> @emptyTime </p>
+<p><b>Temperature:</b> @emptyTemperature </p>
+
+
+@code{
+
+    string emptyLocation = " ";
+    string emptyTime = " ";
+    string emptyTemperature = " ";
+
+    public async void WebscrapWeatherData()
+    {
+        using var httpClient = new HttpClient();
+        var htmlDocument = new HtmlDocument();
+        var html = await httpClient.GetStringAsync("https://weather.com/weather/today/l/53.13,23.17?par=google&temp=c");
+        htmlDocument.LoadHtml(html);
+
+        var locationNodes = htmlDocument.DocumentNode.SelectNodes("//h1[contains(@class, 'CurrentConditions--location--1Ayv3')]");
+
+        foreach (HtmlNode item in locationNodes)
+        {
+            string t = item.InnerText;
+            emptyLocation = t;
+        }
+
+        var timeNodes = htmlDocument.DocumentNode.SelectNodes("//div[contains(@class, 'CurrentConditions--timestamp--1SWy5')]");
+
+        foreach (HtmlNode item in timeNodes)
+        {
+            string t = item.InnerText;
+            emptyTime = t;
+        }
+
+        var temperatureNodes = htmlDocument.DocumentNode.SelectNodes("//div[contains(@class, 'CurrentConditions--primary--3xWnK')]");
+
+        foreach (HtmlNode item in temperatureNodes)
+        {
+            string t = item.InnerText;
+            emptyTemperature = t;
+        }
+
+    }
+
+}
