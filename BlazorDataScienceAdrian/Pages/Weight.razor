@@ -1,0 +1,43 @@
+﻿@using HtmlAgilityPack;
+@page "/weightcalc"
+
+<h3>BMI Calculator</h3>
+
+
+<b>Age: </b><input @bind="AgeValue" /> <br />
+<b>Weight(kg): </b><input @bind="WeightValue" /><br />
+<b>Height(cm): </b><input @bind="HeightValue" /><br />
+<b>Gender: </b><input @bind="GenderValue" /><br />
+
+<button class="btn btn-primary" @onclick="CalculateBmi">Calculate BMI</button>
+
+
+<p><b>Your Result </b>@Info</p>
+
+
+@code{
+
+    double BMI { get; set; }
+
+    private int AgeValue { get; set; }
+
+    private double WeightValue { get; set; }
+
+    private double HeightValue { get; set; }
+
+    private string GenderValue { get; set; }
+
+    private string Info { get; set; }
+
+
+    private void CalculateBmi()
+    {
+        BMI = WeightValue / Math.Pow(HeightValue / 100.0, 2);
+        DisplayResult();
+
+    }
+    private void DisplayResult()
+    {
+        Info = "As a " + @AgeValue + " years old " + @GenderValue + " your BMI is equal to: " + @BMI;
+    }
+}
